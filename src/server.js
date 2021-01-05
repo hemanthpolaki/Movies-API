@@ -5,7 +5,7 @@ const Routes = require('./Routers/Movie');
 // Setting server properties
 const server = Hapi.server({
     port: process.env.PORT, 
-    host: 'localhost'
+    host: process.env.LOCAL_HOST || '0.0.0.0'
 });
 
 // Adding route handlers
